@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문법 페이지 7</title>
+</head>
+<body>
+  <h3> 자바스크립트에서도 타임리프를 사용할 수 있습니다. </h3>
+  <input type="text" id="username" disabled>
+  <script th:inline="javascript">
+    const username = /*[[ ${username} ]]*/ "admin";
+    const usernameEl = document.getElementById('username');
+    usernameEl.value = username;
+  </script>
+</body>
+</html>
